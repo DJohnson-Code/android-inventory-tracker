@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/textInventoryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Current Inventory"
+            android:textColor="#1F2933"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textStockWarning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="#FFF3CD"
+            android:padding="12dp"
+            android:text="Out of stock: Shipping Boxes"
+            android:textColor="#7A4F00"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inventory List"
+                android:textColor="#1F2933"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:id="@+id/tableInventory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:stretchColumns="0,2">
+
+                <TableRow android:background="#DDE3EA">
+
+                    <TextView
+                        android:padding="8dp"
+                        android:text="Item Name"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Qty"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:padding="8dp"
+                        android:text="Location"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Action"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:padding="8dp"
+                        android:text="Work Gloves" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="12" />
+
+                    <TextView
+                        android:padding="8dp"
+                        android:text="Shelf A" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#7A2E2E"
+                        android:text="Delete"
+                        android:textColor="#FFFFFF" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:padding="8dp"
+                        android:text="Safety Glasses" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="4" />
+
+                    <TextView
+                        android:padding="8dp"
+                        android:text="Shelf B" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#7A2E2E"
+                        android:text="Delete"
+                        android:textColor="#FFFFFF" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:padding="8dp"
+                        android:text="Shipping Boxes" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="0" />
+
+                    <TextView
+                        android:padding="8dp"
+                        android:text="Shelf C" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#7A2E2E"
+                        android:text="Delete"
+                        android:textColor="#FFFFFF" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonAddItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#2F5D50"
+            android:onClick="openAddItem"
+            android:text="Add Item"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>
